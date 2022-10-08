@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
     Random random=new Random();
     public ArrayList<TestBean> createFakeData(int count, String preFix) {
         ArrayList<TestBean> fakeDdatas = new ArrayList<>();
-        int finalCount=3+random.nextInt(count);
+        int finalCount=1+random.nextInt(count);
         for (int i = 0; i < finalCount; i++) {
             TestBean testBean = new TestBean(preFix + String.valueOf(i));
             fakeDdatas.add(testBean);
