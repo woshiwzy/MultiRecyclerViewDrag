@@ -26,6 +26,7 @@ import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         touchRecylerViews = new ArrayList<>();
-        int addRcvCount = 5;
+        int addRcvCount = 5;//设置5个组演示拖放
         for (int i = 0; i < addRcvCount; i++) {
             PageListGroupBinding pageListGroupBinding = PageListGroupBinding.inflate(getLayoutInflater());
             pageListGroupBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -165,8 +166,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    Random random=new Random();
     public ArrayList<TestBean> createFakeData(int count, String preFix) {
         ArrayList<TestBean> fakeDdatas = new ArrayList<>();
+        int finalCount=3+random.nextInt(count);
         for (int i = 0; i < count; i++) {
             TestBean testBean = new TestBean(preFix + String.valueOf(i));
             fakeDdatas.add(testBean);
