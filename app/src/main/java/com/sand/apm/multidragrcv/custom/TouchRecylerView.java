@@ -38,7 +38,7 @@ public class TouchRecylerView extends RecyclerView {
         normalPaint = new Paint();
         normalPaint.setAntiAlias(true);
         normalPaint.setStyle(Paint.Style.STROKE);
-        normalPaint.setStrokeWidth(5);
+        normalPaint.setStrokeWidth(3);
         normalPaint.setColor(Color.BLUE);
 
     }

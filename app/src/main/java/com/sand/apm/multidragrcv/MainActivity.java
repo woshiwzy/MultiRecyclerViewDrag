@@ -111,13 +111,11 @@ public class MainActivity extends AppCompatActivity {
         for(TouchRecylerView touchRecylerView:arrayListTouchRecylerViews){
             if(touchRecylerView.containsPointer(pointerX)){
                 targetTouchRecylerView= touchRecylerView;
-
                 if(touchRecylerView==sourceTouchRecylerView){
                     touchRecylerView.markStart();
                 }else {
                     touchRecylerView.markDragIn();
                 }
-
             }else {
                 touchRecylerView.unMark();
             }
@@ -132,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private CommonAdapter<TestBean> createFakeAdapter(PageListGroupBinding pageList,String prefix) {
-        CommonAdapter<TestBean> ada = new CommonAdapter<TestBean>(this, R.layout.item_layout, createFakeData(10, prefix)) {
+        CommonAdapter<TestBean> ada = new CommonAdapter<TestBean>(this, R.layout.item_layout, createFakeData(4, prefix)) {
             @Override
             protected void convert(ViewHolder holder, TestBean testBean, int position) {
                 holder.setText(R.id.textViewName, testBean.getText());
@@ -170,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<TestBean> createFakeData(int count, String preFix) {
         ArrayList<TestBean> fakeDdatas = new ArrayList<>();
         int finalCount=3+random.nextInt(count);
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < finalCount; i++) {
             TestBean testBean = new TestBean(preFix + String.valueOf(i));
             fakeDdatas.add(testBean);
         }
