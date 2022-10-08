@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sand.apm.multidragrcv.custom.DownRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:text="Hello"
+        android:textSize="12sp"
+        android:id="@+id/textViewName"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</com.sand.apm.multidragrcv.custom.DownRelativeLayout>

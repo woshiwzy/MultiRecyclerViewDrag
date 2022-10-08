@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTeachLeft"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#0B53D6">
+
+        <TextView
+            android:text="在右侧的HorizontalScrollView中有多个RecylerView,这里演示在其中的多个RecylerView中拖拽数据的效果"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTeachRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/relativeLayoutTeachLeft">
+
+        <com.sand.apm.multidragrcv.custom.TouchHorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutChilds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+        </com.sand.apm.multidragrcv.custom.TouchHorizontalScrollView>
+
+        <com.sand.apm.multidragrcv.custom.TouchLayout
+            android:id="@+id/absLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.sand.apm.multidragrcv.custom.DragImageView
+                android:id="@+id/imageViewDrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0B53D6" />
+
+        </com.sand.apm.multidragrcv.custom.TouchLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
