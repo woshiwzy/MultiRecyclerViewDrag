@@ -28,6 +28,11 @@ import com.zhy.adapter.recyclerview.base.ViewHolder;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * 关键代码是
+ * com.sand.apm.multidragrcv.custom.EventHelper#giveFistTargetForViewGroup(android.view.View, android.view.ViewGroup)
+ * 通过修改ViewGroup的mFirstTouchTarget 来设置当前事件的接受者，极大的简化事件分发机制
+ */
 public class MainActivity extends AppCompatActivity {
 
     private String tag="drag";
